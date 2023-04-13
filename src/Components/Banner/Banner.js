@@ -3,11 +3,10 @@ import { API_KEY, imageUrl } from '../../constants/constants'
 import axios from '../../axios'
 import './Banner.css'
 function Banner() {
-    const random = Math.floor(Math.random() * 10) + 1;
     const [movie, setMovie] = useState()
     useEffect(()=> {
+          const random = Math.floor(Math.random() * 10) + 1;
           axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
-            console.log(response.data.results[0])
             setMovie(response.data.results[random])
           })  
     }, [])
