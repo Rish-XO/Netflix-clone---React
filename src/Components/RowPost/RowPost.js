@@ -25,7 +25,7 @@ console.log(id)
     if(responce.data.results.length!==0){
       setUrlId(responce.data.results[0])
     }else{
-      console.log("arrat empty");
+      console.log("arrat empty ");
     }
    })
   }
